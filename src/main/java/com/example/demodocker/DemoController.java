@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     @PostMapping("/GetMessage")
-    public String home() { return "HI FINALLY YOU MADE I";}
+    public String home() { return "Hi FINALLY YOU MADE I";}
 
 }
