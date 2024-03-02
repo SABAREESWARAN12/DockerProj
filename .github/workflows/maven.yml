@@ -29,3 +29,14 @@ jobs:
           cache: maven
       - name: Build with Maven
         run: mvn clean install
+
+
+      - name: DockerHub
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: sabareeswaran12/demodocker
+        tags: latest
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
